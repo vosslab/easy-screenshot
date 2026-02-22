@@ -14,7 +14,7 @@
 ```bash
 source source_me.sh
 /opt/homebrew/opt/python@3.12/bin/python3.12 -m pip install -r pip_requirements.txt
-/opt/homebrew/opt/python@3.12/bin/python3.12 screenshot/screencapture.py --help
+/opt/homebrew/opt/python@3.12/bin/python3.12 -m screenshot.screencapture --help
 ```
 
 ## Testing

@@ -4,8 +4,7 @@ This page tracks adjacent repositories and upstream dependencies relevant to thi
 
 ## Upstream references
 - [https://github.com/thismachinechills/pyscreencapture](https://github.com/thismachinechills/pyscreencapture): upstream repository for this tool.
-- [https://pypi.org/project/pyobjc-framework-Quartz/](https://pypi.org/project/pyobjc-framework-Quartz/): Quartz bridge used for window metadata access.
-- [https://pypi.org/project/click/](https://pypi.org/project/click/): CLI option parsing dependency.
+- [https://pypi.org/project/pyobjc-framework-ScreenCaptureKit/](https://pypi.org/project/pyobjc-framework-ScreenCaptureKit/): ScreenCaptureKit bridge used for modern window metadata access.
 
 ## Known gaps
 - Add sibling internal repositories only after confirmed integration points are documented.

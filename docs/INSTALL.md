@@ -1,6 +1,6 @@
 # Install
 
-This project is a macOS command-line tool that uses Quartz window metadata and the system `screencapture` command.
+This project is a macOS command-line tool that uses ScreenCaptureKit window metadata and the system `screencapture` command.
 
 ## Prerequisites
 - macOS with the built-in `screencapture` utility available on `PATH`.
@@ -13,7 +13,7 @@ This project is a macOS command-line tool that uses Quartz window metadata and t
 - Install runtime dependencies with `/opt/homebrew/opt/python@3.12/bin/python3.12 -m pip install -r pip_requirements.txt`.
 
 ## Verify installation
-- Run `/opt/homebrew/opt/python@3.12/bin/python3.12 screenshot/screencapture.py --help`.
+- Run `/opt/homebrew/opt/python@3.12/bin/python3.12 -m screenshot.screencapture --help`.
 - If the help text renders, the local install path is ready.
 
 ## Known gaps

@@ -2,10 +2,10 @@
 
 Use this page when the screenshot command fails to find windows or fails to capture output.
 
-## Import error for Quartz
-- Symptom: `ImportError` requesting `pyobjc-framework-Quartz`.
+## Import error for ScreenCaptureKit
+- Symptom: `ImportError` requesting `pyobjc-framework-ScreenCaptureKit`.
 - Cause: runtime dependency is missing.
-- Fix: run `/opt/homebrew/opt/python@3.12/bin/python3.12 -m pip install -r requirements.txt`.
+- Fix: run `/opt/homebrew/opt/python@3.12/bin/python3.12 -m pip install -r pip_requirements.txt`.
 
 ## No matching window found
 - Symptom: error says the window with the selected parent and title was not found.
@@ -18,7 +18,7 @@ Use this page when the screenshot command fails to find windows or fails to capt
 - Fix: use one of `png`, `pdf`, `jpg`, `tiff` for `--output` and verify Screen Recording permission for your terminal app.
 
 ## Help and baseline checks
-- Run `/opt/homebrew/opt/python@3.12/bin/python3.12 screenshot/screencapture.py --help`.
+- Run `/opt/homebrew/opt/python@3.12/bin/python3.12 -m screenshot.screencapture --help`.
 - Run `source source_me.sh && /opt/homebrew/opt/python@3.12/bin/python3.12 -m pytest tests -q` to confirm repo health.
 
 ## Known gaps

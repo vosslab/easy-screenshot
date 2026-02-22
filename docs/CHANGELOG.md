@@ -15,3 +15,23 @@
 - Added `VERSION` and synchronized it with `pyproject.toml` version `1.0.0`.
 - Added `pip_requirements.txt` as the runtime dependency manifest and updated docs/README installation commands to use it.
 - Removed `docs/ROADMAP.md` and `docs/TODO.md` because this repo is a small app without those planning artifacts.
+- Reworked `screenshot/screencapture.py` CLI from `click` to `argparse` with explicit `parse_args()`, `run(args)`, and `main()` entry flow.
+- Updated package script entry point in `pyproject.toml` to `screenshot.screencapture:main`.
+- Removed `click` from runtime and development requirement manifests.
+- Standardized documented execution path to module invocation: `python -m screenshot.screencapture ...`.
+- Replaced Quartz-based window discovery with ScreenCaptureKit-based window discovery in `screenshot/get_window_id.py`.
+- Switched runtime dependency from `pyobjc-framework-Quartz` to `pyobjc-framework-ScreenCaptureKit`.
+- Updated architecture, install, troubleshooting, and related-project docs to reflect ScreenCaptureKit as the modern foundation.
+- Added `--list-windows` CLI mode to `screenshot/screencapture.py` to print matching window id/app/title choices for a selected application before capture.
+- Added `--select` interactive mode with Rich tables/prompts to choose application and window by number before capturing.
+- Added `rich` to runtime dependencies for interactive terminal UI.
+- Made interactive selection the default when no `--application` is provided.
+- Switched explicit app targeting from positional `APPLICATION_NAME` to `-A/--application`.
+- Removed shadow functionality and shadow CLI flags; screenshots now always capture without window shadows.
+- Added `--include-offscreen-windows` to broaden window discovery/listing by disabling the on-screen-only filter.
+- Replaced `--list-windows` with `--preview` and added `--dry-run` as an alias.
+- Replaced `--all_windows` with `--multi` to make single-window capture the default.
+- Removed `--window_selection_options` and replaced it with `--include-desktop` and `--include-offscreen`.
+- Reintroduced optional shadow capture as `--with-shadow` with no-shadow as the default.
+- Improved interactive prompts to auto-select when only one application/window match exists, and added default choice `1` for multi-choice prompts.
+- Updated default output filename normalization to use underscores instead of spaces for shell-friendly copy/paste.
