@@ -1,6 +1,8 @@
 # Development dependencies
 bandit  # security linting for Python code
+click  # CLI option parser used by screenshot/screencapture.py
 packaging  # version parsing/comparison helpers used by tooling/tests
 pyflakes  # static analysis lint checks
 pytest  # automated test runner
 rich  # formatted terminal output in developer tools
+setuptools  # packaging helper imported by setup.py
