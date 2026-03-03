@@ -1,3 +1,11 @@
+## 2026-02-28
+
+- Fixed `run.sh` so it works from any current directory by resolving `REPO_ROOT` from `BASH_SOURCE`, exporting `PYTHONPATH` after shell initialization, launching via `python3 -m screenshot.screencapture`, and avoiding `set -u` breakage when `.bashrc` references unset interactive vars.
+
+## 2026-02-27
+
+- Added `run.sh` convenience wrapper to invoke `screenshot.screencapture` module with proper environment sourcing.
+
 ## 2026-02-22
 
 - Fixed failing pytest gates in `tests/` by removing the non-ASCII emoji from `README.md`.
