@@ -1,3 +1,9 @@
+## 2026-11-06
+
+### Fixes and Maintenance
+
+- Synchronized shared style guides, tests, and repository support files from the starter template.
+
 ## 2026-02-28
 
 - Fixed `run.sh` so it works from any current directory by resolving `REPO_ROOT` from `BASH_SOURCE`, exporting `PYTHONPATH` after shell initialization, launching via `python3 -m screenshot.screencapture`, and avoiding `set -u` breakage when `.bashrc` references unset interactive vars.
